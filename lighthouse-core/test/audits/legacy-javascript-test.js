@@ -5,7 +5,7 @@
  */
 'use strict';
 
-const assert = require('assert');
+const assert = require('assert').strict;
 const LegacyJavascript = require('../../audits/legacy-javascript.js');
 const networkRecordsToDevtoolsLog = require('../network-records-to-devtools-log.js');
 
@@ -205,5 +205,18 @@ describe('LegacyJavaScript audit', () => {
     const result = await LegacyJavascript.audit(artifacts, {computedCache: new Map()});
     expect(result.details.items[0].signals).toEqual(['String.prototype.repeat']);
     expect(result.details.items[0].locations).toMatchObject([{line: 1, column: 0}]);
+  });
+});
+
+describe('LegacyJavaScript signals', () => {
+  it('expect babel-preset-env = true variant to not have any signals', () => {
+    const signalSummary = require('../../scripts/legacy-javascript/summary-signals.json');
+    const expectedMissingSignals = [
+      'core-js-2-preset-env-esmodules/true',
+      'core-js-3-preset-env-esmodules/true',
+    ];
+    for (const expectedVariant of expectedMissingSignals) {
+      expect(signalSummary.variantsMissingSignals).toContain(expectedVariant);
+    }
   });
 });
