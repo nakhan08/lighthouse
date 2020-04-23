@@ -393,7 +393,7 @@ const defaultConfig = {
     },
     'best-practices-general': {
       title: str_(UIStrings.generalGroupTitle),
-    }
+    },
   },
   categories: {
     'performance': {
