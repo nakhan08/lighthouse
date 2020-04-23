@@ -105,6 +105,8 @@ const UIStrings = {
   'not automatically checked by Lighthouse. They do not affect your score but it\'s important that you verify them manually.',
   /** Title of the Best Practices category of audits. This is displayed at the top of a list of audits focused on topics related to following web development best practices and accepted guidelines. Also used as a label of a score gauge; try to limit to 20 characters. */
   bestPracticesCategoryTitle: 'Best Practices',
+  /** Title of the Trust & Safety group of the Best Practices category. Within this section are the audits related to trust and safety. */
+  safetyGroupTitle: 'Trust & Safety',
   /** Title of the Fast and Reliable section of the web app category. Within this section are audits that check if the web site loaded quickly and can reliably load even if the internet connection is very slow or goes offline. */
   pwaFastReliableGroupTitle: 'Fast and reliable',
   /** Title of the Installable section of the web app category. Within this section are audits that check if Chrome supports installing the web site as an app on their device. */
@@ -384,6 +386,9 @@ const defaultConfig = {
       title: str_(UIStrings.seoCrawlingGroupTitle),
       description: str_(UIStrings.seoCrawlingGroupDescription),
     },
+    'trust-and-safety': {
+      title: str_(UIStrings.safetyGroupTitle),
+    },
   },
   categories: {
     'performance': {
@@ -505,18 +510,20 @@ const defaultConfig = {
     'best-practices': {
       title: str_(UIStrings.bestPracticesCategoryTitle),
       auditRefs: [
+        // Trust & Safety
+        {id: 'is-on-https', weight: 1, group: 'trust-and-safety'},
+        {id: 'external-anchors-use-rel-noopener', weight: 1, group: 'trust-and-safety'},
+        {id: 'geolocation-on-start', weight: 1, group: 'trust-and-safety'},
+        {id: 'notification-on-start', weight: 1, group: 'trust-and-safety'},
+        {id: 'no-vulnerable-libraries', weight: 1, group: 'trust-and-safety'},
+        // No Group
         {id: 'appcache-manifest', weight: 1},
-        {id: 'is-on-https', weight: 1},
         {id: 'uses-http2', weight: 1},
         {id: 'uses-passive-event-listeners', weight: 1},
         {id: 'no-document-write', weight: 1},
-        {id: 'external-anchors-use-rel-noopener', weight: 1},
-        {id: 'geolocation-on-start', weight: 1},
         {id: 'doctype', weight: 1},
         {id: 'charset', weight: 1},
-        {id: 'no-vulnerable-libraries', weight: 1},
         {id: 'js-libraries', weight: 0},
-        {id: 'notification-on-start', weight: 1},
         {id: 'deprecations', weight: 1},
         {id: 'password-inputs-can-be-pasted-into', weight: 1},
         {id: 'errors-in-console', weight: 1},
