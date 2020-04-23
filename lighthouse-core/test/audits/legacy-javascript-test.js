@@ -176,7 +176,7 @@ describe('LegacyJavaScript audit', () => {
   it('uses source maps to identify polyfills', async () => {
     const map = {
       sources: [
-        'node_modules/blah/blah/es6.string.repeat',
+        'node_modules/blah/blah/es6.string.repeat.js',
       ],
       mappings: 'blah',
     };
@@ -191,7 +191,7 @@ describe('LegacyJavaScript audit', () => {
   it('uses location from pattern matching over source map', async () => {
     const map = {
       sources: [
-        'node_modules/blah/blah/es6.string.repeat',
+        'node_modules/blah/blah/es6.string.repeat.js',
       ],
       mappings: 'blah',
     };
@@ -210,13 +210,15 @@ describe('LegacyJavaScript audit', () => {
 
 describe('LegacyJavaScript signals', () => {
   it('expect babel-preset-env = true variant to not have any signals', () => {
-    const signalSummary = require('../../scripts/legacy-javascript/summary-signals.json');
-    const expectedMissingSignals = [
-      'core-js-2-preset-env-esmodules/true',
-      'core-js-3-preset-env-esmodules/true',
-    ];
-    for (const expectedVariant of expectedMissingSignals) {
-      expect(signalSummary.variantsMissingSignals).toContain(expectedVariant);
+    for (const summaryFilename of ['summary-signals.json', 'summary-signals-nomaps.json']) {
+      const signalSummary = require(`../../scripts/legacy-javascript/${summaryFilename}`);
+      const expectedMissingSignals = [
+        'core-js-2-preset-env-esmodules/true',
+        'core-js-3-preset-env-esmodules/true',
+      ];
+      for (const expectedVariant of expectedMissingSignals) {
+        expect(signalSummary.variantsMissingSignals).toContain(expectedVariant);
+      }
     }
   });
 });
