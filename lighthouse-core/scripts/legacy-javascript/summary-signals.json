@@ -1,5 +1,5 @@
 {
-  "totalSignals": 253,
+  "totalSignals": 243,
   "variantsMissingSignals": [
     "core-js-2-preset-env-esmodules/true",
     "core-js-3-preset-env-esmodules/true"
@@ -19,7 +19,7 @@
     },
     {
       "name": "core-js-2-only-polyfill/es6-array-find-index",
-      "signals": "Array.prototype.findIndex, Array.prototype.find"
+      "signals": "Array.prototype.findIndex"
     },
     {
       "name": "core-js-2-only-polyfill/es6-array-for-each",
@@ -51,7 +51,7 @@
     },
     {
       "name": "core-js-2-only-polyfill/es6-array-reduce-right",
-      "signals": "Array.prototype.reduce, Array.prototype.reduceRight"
+      "signals": "Array.prototype.reduceRight"
     },
     {
       "name": "core-js-2-only-polyfill/es6-array-some",
@@ -183,11 +183,11 @@
     },
     {
       "name": "core-js-2-only-polyfill/es6-reflect-get-own-property-descriptor",
-      "signals": "Reflect.getOwnPropertyDescriptor, Reflect.get"
+      "signals": "Reflect.getOwnPropertyDescriptor"
     },
     {
       "name": "core-js-2-only-polyfill/es6-reflect-get-prototype-of",
-      "signals": "Reflect.getPrototypeOf, Reflect.get"
+      "signals": "Reflect.getPrototypeOf"
     },
     {
       "name": "core-js-2-only-polyfill/es6-reflect-has",
@@ -211,7 +211,7 @@
     },
     {
       "name": "core-js-2-only-polyfill/es6-reflect-set-prototype-of",
-      "signals": "Reflect.setPrototypeOf, Reflect.set"
+      "signals": "Reflect.setPrototypeOf"
     },
     {
       "name": "core-js-2-only-polyfill/es6-set",
@@ -347,7 +347,7 @@
     },
     {
       "name": "core-js-3-only-polyfill/es6-array-find-index",
-      "signals": "Array.prototype.findIndex, Array.prototype.find"
+      "signals": "Array.prototype.findIndex"
     },
     {
       "name": "core-js-3-only-polyfill/es6-array-for-each",
@@ -379,7 +379,7 @@
     },
     {
       "name": "core-js-3-only-polyfill/es6-array-reduce-right",
-      "signals": "Array.prototype.reduce, Array.prototype.reduceRight"
+      "signals": "Array.prototype.reduceRight"
     },
     {
       "name": "core-js-3-only-polyfill/es6-array-some",
@@ -511,11 +511,11 @@
     },
     {
       "name": "core-js-3-only-polyfill/es6-reflect-get-own-property-descriptor",
-      "signals": "Reflect.getOwnPropertyDescriptor, Reflect.get"
+      "signals": "Reflect.getOwnPropertyDescriptor"
     },
     {
       "name": "core-js-3-only-polyfill/es6-reflect-get-prototype-of",
-      "signals": "Reflect.getPrototypeOf, Reflect.get"
+      "signals": "Reflect.getPrototypeOf"
     },
     {
       "name": "core-js-3-only-polyfill/es6-reflect-has",
@@ -539,7 +539,7 @@
     },
     {
       "name": "core-js-3-only-polyfill/es6-reflect-set-prototype-of",
-      "signals": "Reflect.setPrototypeOf, Reflect.set"
+      "signals": "Reflect.setPrototypeOf"
     },
     {
       "name": "core-js-3-only-polyfill/es6-set",
