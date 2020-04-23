@@ -1331,8 +1331,20 @@
   "lighthouse-core/config/default-config.js | a11yTablesListsVideoGroupTitle": {
     "message": "T̂áb̂ĺêś âńd̂ ĺîśt̂ś"
   },
+  "lighthouse-core/config/default-config.js | bestPracticesBrowserGroupTitle": {
+    "message": "B̂ŕôẃŝér̂ Ćôḿp̂át̂íb̂íl̂ít̂ý"
+  },
   "lighthouse-core/config/default-config.js | bestPracticesCategoryTitle": {
     "message": "B̂éŝt́ P̂ŕâćt̂íĉéŝ"
+  },
+  "lighthouse-core/config/default-config.js | bestPracticesGeneralGroupTitle": {
+    "message": "Ĝén̂ér̂ál̂"
+  },
+  "lighthouse-core/config/default-config.js | bestPracticesSafetyGroupTitle": {
+    "message": "T̂ŕûśt̂ & Śâf́êt́ŷ"
+  },
+  "lighthouse-core/config/default-config.js | bestPracticesUXGroupTitle": {
+    "message": "Ûśêŕ Êx́p̂ér̂íêńĉé"
   },
   "lighthouse-core/config/default-config.js | budgetsGroupDescription": {
     "message": "P̂ér̂f́ôŕm̂án̂ćê b́ûd́ĝét̂ś ŝét̂ śt̂án̂d́âŕd̂ś f̂ór̂ t́ĥé p̂ér̂f́ôŕm̂án̂ćê óf̂ ýôúr̂ śît́ê."
@@ -1351,9 +1363,6 @@
   },
   "lighthouse-core/config/default-config.js | firstPaintImprovementsGroupTitle": {
     "message": "F̂ír̂śt̂ Ṕâín̂t́ Îḿp̂ŕôv́êḿêńt̂ś"
-  },
-  "lighthouse-core/config/default-config.js | generalGroupTitle": {
-    "message": "Ĝén̂ér̂ál̂"
   },
   "lighthouse-core/config/default-config.js | loadOpportunitiesGroupDescription": {
     "message": "T̂h́êśê śûǵĝéŝt́îón̂ś ĉán̂ h́êĺp̂ ýôúr̂ ṕâǵê ĺôád̂ f́âśt̂ér̂. T́ĥéŷ d́ôń't̂ [d́îŕêćt̂ĺŷ áf̂f́êćt̂](https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted) t́ĥé P̂ér̂f́ôŕm̂án̂ćê śĉór̂é."
@@ -1390,9 +1399,6 @@
   },
   "lighthouse-core/config/default-config.js | pwaOptimizedGroupTitle": {
     "message": "P̂ẂÂ Óp̂t́îḿîźêd́"
-  },
-  "lighthouse-core/config/default-config.js | safetyGroupTitle": {
-    "message": "T̂ŕûśt̂ & Śâf́êt́ŷ"
   },
   "lighthouse-core/config/default-config.js | seoCategoryDescription": {
     "message": "T̂h́êśê ćĥéĉḱŝ én̂śûŕê t́ĥát̂ ýôúr̂ ṕâǵê íŝ óp̂t́îḿîźêd́ f̂ór̂ śêár̂ćĥ én̂ǵîńê ŕêśûĺt̂ś r̂án̂ḱîńĝ. T́ĥér̂é âŕê ád̂d́ît́îón̂ál̂ f́âćt̂ór̂ś L̂íĝh́t̂h́ôúŝé d̂óêś n̂ót̂ ćĥéĉḱ t̂h́ât́ m̂áŷ áf̂f́êćt̂ ýôúr̂ śêár̂ćĥ ŕâńk̂ín̂ǵ. [L̂éâŕn̂ ḿôŕê](https://support.google.com/webmasters/answer/35769)."

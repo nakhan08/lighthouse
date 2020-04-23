@@ -1331,8 +1331,20 @@
   "lighthouse-core/config/default-config.js | a11yTablesListsVideoGroupTitle": {
     "message": "Tables and lists"
   },
+  "lighthouse-core/config/default-config.js | bestPracticesBrowserGroupTitle": {
+    "message": "Browser Compatibility"
+  },
   "lighthouse-core/config/default-config.js | bestPracticesCategoryTitle": {
     "message": "Best Practices"
+  },
+  "lighthouse-core/config/default-config.js | bestPracticesGeneralGroupTitle": {
+    "message": "General"
+  },
+  "lighthouse-core/config/default-config.js | bestPracticesSafetyGroupTitle": {
+    "message": "Trust & Safety"
+  },
+  "lighthouse-core/config/default-config.js | bestPracticesUXGroupTitle": {
+    "message": "User Experience"
   },
   "lighthouse-core/config/default-config.js | budgetsGroupDescription": {
     "message": "Performance budgets set standards for the performance of your site."
@@ -1351,9 +1363,6 @@
   },
   "lighthouse-core/config/default-config.js | firstPaintImprovementsGroupTitle": {
     "message": "First Paint Improvements"
-  },
-  "lighthouse-core/config/default-config.js | generalGroupTitle": {
-    "message": "General"
   },
   "lighthouse-core/config/default-config.js | loadOpportunitiesGroupDescription": {
     "message": "These suggestions can help your page load faster. They don't [directly affect](https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted) the Performance score."
@@ -1390,9 +1399,6 @@
   },
   "lighthouse-core/config/default-config.js | pwaOptimizedGroupTitle": {
     "message": "PWA Optimized"
-  },
-  "lighthouse-core/config/default-config.js | safetyGroupTitle": {
-    "message": "Trust & Safety"
   },
   "lighthouse-core/config/default-config.js | seoCategoryDescription": {
     "message": "These checks ensure that your page is optimized for search engine results ranking. There are additional factors Lighthouse does not check that may affect your search ranking. [Learn more](https://support.google.com/webmasters/answer/35769)."

@@ -106,9 +106,13 @@ const UIStrings = {
   /** Title of the Best Practices category of audits. This is displayed at the top of a list of audits focused on topics related to following web development best practices and accepted guidelines. Also used as a label of a score gauge; try to limit to 20 characters. */
   bestPracticesCategoryTitle: 'Best Practices',
   /** Title of the Trust & Safety group of the Best Practices category. Within this section are the audits related to trust and safety. */
-  safetyGroupTitle: 'Trust & Safety',
+  bestPracticesSafetyGroupTitle: 'Trust & Safety',
+  /** Title of the User Experience group of the Best Practices category. Within this section are the audits related to trust and safety. */
+  bestPracticesUXGroupTitle: 'User Experience',
+  /** Title of the Browser Compatibility group of the Best Practices category. Within this section are the audits related to trust and safety. */
+  bestPracticesBrowserGroupTitle: 'Browser Compatibility',
   /** Title of the General group of the Best Practices category. Within this section are the audits that don't belong to a specific group. */
-  generalGroupTitle: 'General',
+  bestPracticesGeneralGroupTitle: 'General',
   /** Title of the Fast and Reliable section of the web app category. Within this section are audits that check if the web site loaded quickly and can reliably load even if the internet connection is very slow or goes offline. */
   pwaFastReliableGroupTitle: 'Fast and reliable',
   /** Title of the Installable section of the web app category. Within this section are audits that check if Chrome supports installing the web site as an app on their device. */
@@ -388,11 +392,17 @@ const defaultConfig = {
       title: str_(UIStrings.seoCrawlingGroupTitle),
       description: str_(UIStrings.seoCrawlingGroupDescription),
     },
-    'trust-and-safety': {
-      title: str_(UIStrings.safetyGroupTitle),
+    'best-practices-safety': {
+      title: str_(UIStrings.bestPracticesSafetyGroupTitle),
+    },
+    'best-practices-ux': {
+      title: str_(UIStrings.bestPracticesUXGroupTitle),
+    },
+    'best-practices-browser': {
+      title: str_(UIStrings.bestPracticesBrowserGroupTitle),
     },
     'best-practices-general': {
-      title: str_(UIStrings.generalGroupTitle),
+      title: str_(UIStrings.bestPracticesGeneralGroupTitle),
     },
   },
   categories: {
@@ -438,6 +448,9 @@ const defaultConfig = {
         {id: 'timing-budget', weight: 0, group: 'budgets'},
         {id: 'resource-summary', weight: 0, group: 'diagnostics'},
         {id: 'third-party-summary', weight: 0, group: 'diagnostics'},
+        {id: 'uses-http2', weight: 0, group: 'diagnostics'},
+        {id: 'uses-passive-event-listeners', weight: 0, group: 'diagnostics'},
+        {id: 'no-document-write', weight: 0, group: 'diagnostics'},
         // Audits past this point don't belong to a group and will not be shown automatically
         {id: 'network-requests', weight: 0},
         {id: 'network-rtt', weight: 0},
@@ -516,24 +529,23 @@ const defaultConfig = {
       title: str_(UIStrings.bestPracticesCategoryTitle),
       auditRefs: [
         // Trust & Safety
-        {id: 'is-on-https', weight: 1, group: 'trust-and-safety'},
-        {id: 'external-anchors-use-rel-noopener', weight: 1, group: 'trust-and-safety'},
-        {id: 'geolocation-on-start', weight: 1, group: 'trust-and-safety'},
-        {id: 'notification-on-start', weight: 1, group: 'trust-and-safety'},
-        {id: 'no-vulnerable-libraries', weight: 1, group: 'trust-and-safety'},
+        {id: 'is-on-https', weight: 1, group: 'best-practices-safety'},
+        {id: 'external-anchors-use-rel-noopener', weight: 1, group: 'best-practices-safety'},
+        {id: 'geolocation-on-start', weight: 1, group: 'best-practices-safety'},
+        {id: 'notification-on-start', weight: 1, group: 'best-practices-safety'},
+        {id: 'no-vulnerable-libraries', weight: 1, group: 'best-practices-safety'},
+        // User Experience
+        {id: 'password-inputs-can-be-pasted-into', weight: 1, group: 'best-practices-ux'},
+        {id: 'image-aspect-ratio', weight: 1, group: 'best-practices-ux'},
+        {id: 'image-size-responsive', weight: 1, group: 'best-practices-ux'},
+        // Browser Compatibility
+        {id: 'doctype', weight: 1, group: 'best-practices-browser'},
+        {id: 'charset', weight: 1, group: 'best-practices-browser'},
         // General Group
         {id: 'appcache-manifest', weight: 1, group: 'best-practices-general'},
-        {id: 'uses-http2', weight: 1, group: 'best-practices-general'},
-        {id: 'uses-passive-event-listeners', weight: 1, group: 'best-practices-general'},
-        {id: 'no-document-write', weight: 1, group: 'best-practices-general'},
-        {id: 'doctype', weight: 1, group: 'best-practices-general'},
-        {id: 'charset', weight: 1, group: 'best-practices-general'},
         {id: 'js-libraries', weight: 0, group: 'best-practices-general'},
         {id: 'deprecations', weight: 1, group: 'best-practices-general'},
-        {id: 'password-inputs-can-be-pasted-into', weight: 1, group: 'best-practices-general'},
         {id: 'errors-in-console', weight: 1, group: 'best-practices-general'},
-        {id: 'image-aspect-ratio', weight: 1, group: 'best-practices-general'},
-        {id: 'image-size-responsive', weight: 1, group: 'best-practices-general'},
       ],
     },
     'seo': {
