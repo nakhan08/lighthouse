@@ -311,7 +311,7 @@ class LegacyJavascript extends Audit {
           // Skip if the pattern matching found a match for this polyfill.
           if (matches.some(m => m.name === name)) continue;
 
-          const source = bundle.rawMap.sources.find(source => source.includes(module));
+          const source = bundle.rawMap.sources.find(source => source.endsWith(`${module}.js`));
           if (!source) continue;
 
           const mapping = bundle.map.mappings().find(m => m.sourceURL === source);
