@@ -107,6 +107,8 @@ const UIStrings = {
   bestPracticesCategoryTitle: 'Best Practices',
   /** Title of the Trust & Safety group of the Best Practices category. Within this section are the audits related to trust and safety. */
   safetyGroupTitle: 'Trust & Safety',
+  /** Title of the General group of the Best Practices category. Within this section are the audits that don't belong to a specific group. */
+  generalGroupTitle: 'General',
   /** Title of the Fast and Reliable section of the web app category. Within this section are audits that check if the web site loaded quickly and can reliably load even if the internet connection is very slow or goes offline. */
   pwaFastReliableGroupTitle: 'Fast and reliable',
   /** Title of the Installable section of the web app category. Within this section are audits that check if Chrome supports installing the web site as an app on their device. */
@@ -389,6 +391,9 @@ const defaultConfig = {
     'trust-and-safety': {
       title: str_(UIStrings.safetyGroupTitle),
     },
+    'best-practices-general': {
+      title: str_(UIStrings.generalGroupTitle),
+    }
   },
   categories: {
     'performance': {
@@ -516,19 +521,19 @@ const defaultConfig = {
         {id: 'geolocation-on-start', weight: 1, group: 'trust-and-safety'},
         {id: 'notification-on-start', weight: 1, group: 'trust-and-safety'},
         {id: 'no-vulnerable-libraries', weight: 1, group: 'trust-and-safety'},
-        // No Group
-        {id: 'appcache-manifest', weight: 1},
-        {id: 'uses-http2', weight: 1},
-        {id: 'uses-passive-event-listeners', weight: 1},
-        {id: 'no-document-write', weight: 1},
-        {id: 'doctype', weight: 1},
-        {id: 'charset', weight: 1},
-        {id: 'js-libraries', weight: 0},
-        {id: 'deprecations', weight: 1},
-        {id: 'password-inputs-can-be-pasted-into', weight: 1},
-        {id: 'errors-in-console', weight: 1},
-        {id: 'image-aspect-ratio', weight: 1},
-        {id: 'image-size-responsive', weight: 1},
+        // General Group
+        {id: 'appcache-manifest', weight: 1, group: 'best-practices-general'},
+        {id: 'uses-http2', weight: 1, group: 'best-practices-general'},
+        {id: 'uses-passive-event-listeners', weight: 1, group: 'best-practices-general'},
+        {id: 'no-document-write', weight: 1, group: 'best-practices-general'},
+        {id: 'doctype', weight: 1, group: 'best-practices-general'},
+        {id: 'charset', weight: 1, group: 'best-practices-general'},
+        {id: 'js-libraries', weight: 0, group: 'best-practices-general'},
+        {id: 'deprecations', weight: 1, group: 'best-practices-general'},
+        {id: 'password-inputs-can-be-pasted-into', weight: 1, group: 'best-practices-general'},
+        {id: 'errors-in-console', weight: 1, group: 'best-practices-general'},
+        {id: 'image-aspect-ratio', weight: 1, group: 'best-practices-general'},
+        {id: 'image-size-responsive', weight: 1, group: 'best-practices-general'},
       ],
     },
     'seo': {
